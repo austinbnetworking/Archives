@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-Up Example</title>
+
+    <link rel="stylesheet" href="css/popup.css"><!-- CSS Markup for the Popup using animations -->
+
+    <!-- Function that changes the display status of the Popup to none (Not Displaying) -->
+    <script>
+
+        function closePopUp() {
+            document.querySelector(".popup").style.display = 'none';
+            document.querySelector(".background-overlay").style.display = 'none';
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Pop-up Base Markup -->
+    <div class="background-overlay"></div> <!-- Used to create a full browser overlay underneath the Popup-->
+    <div class="popup">
+
+        <div class="close"><button onclick="closePopUp()">X</button></div><!-- Close button to stop displaying the Popup (Links to Javscript in the head section) -->
+
+        <div> <!-- Popup Content Goes Here: -->
+            <h2>Header</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus a exercitationem at nesciunt iusto debitis nam dolor eveniet doloremque. Officia suscipit consectetur omnis rerum modi. Ipsum debitis ipsa odit vero?</p>
+        </div> <!-- End of Popup Content -->
+
+    </div>
+
+</body>
+
+</html>
