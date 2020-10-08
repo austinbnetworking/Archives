@@ -2,21 +2,25 @@ let currentSlide = 0; // Current Slide
 let images = []; // Images Array
 
 // Images List
-images[0] = 'temp.jpg';
-images[1] = 'temp2.jpg';
-images[2] = 'temp3.jpg';
-images[3] = 'temp4.jpg';
-images[4] = 'temp5.jpg';
-images[5] = 'temp6.jpg';
+images[0] = 'images/1.jpg';
+images[1] = 'images/2.jpg';
+images[2] = 'images/3.jpg';
+images[3] = 'images/4.jpg';
+images[4] = 'images/5.jpg';
+images[5] = 'images/6.jpg';
 
 // Opens Lightbox
 function openModal() {
     document.querySelector(".lightboxContainer").style.display = "flex";
+    document.body.style.overflow = "hidden";
+    document.querySelector(".gallery").style.filter = "blur(5px)";
 }
 
 // Closes Lightbox
 function closeModal() {
     document.querySelector(".lightboxContainer").style.display = "none";
+    document.body.style.overflow = "initial";  
+    document.querySelector(".gallery").style.filter = "blur(0)";
 }
 
 // Sets Current Image to Lightbox when clicked
